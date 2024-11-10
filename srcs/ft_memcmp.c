@@ -6,37 +6,24 @@
 /*   By: fzaazaa <fzaazaa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 10:57:22 by fzaazaa           #+#    #+#             */
-/*   Updated: 2024/11/10 12:34:41 by fzaazaa          ###   ########.fr       */
+/*   Updated: 2024/11/10 12:43:13 by fzaazaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include<stdio.h>
-#include<string.h>
 
 int	ft_memcmp(const void *s1, const void *s2, unsigned int n)
 {
 	unsigned int	i;
-	unsigned char	*t1;
-	unsigned char	*t2;
-	int				diff;
 
 	i = 0;
-	t1 = (unsigned char *)s1;
-	t2 = (unsigned char *)s2;
-	while (i < n)
-	{
-		diff = *t1 - *t2;
-		if (*t1 != *t2)
-		{
-			printf("%c - %c -> %i\n", *t1, *t2, diff);
-			return (diff);
-		}
-		t1++;
-		t2++;
-		i++;
-	}
+	while (i++ < n)
+		if (*(unsigned char *)s1++ != *(unsigned char *)s2++)
+			return (*(unsigned char *)s1 - *(unsigned char *)s2);
 	return (0);
 }
+
+/*#include<stdio.h>
+#include<string.h>
+
 
 int	main(int argc, char **argv)
 {
@@ -59,4 +46,4 @@ int	main(int argc, char **argv)
 		memcmp(argv[1], argv[2], total_length)
 		);
 	return (0);
-}
+}*/
