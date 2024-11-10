@@ -6,11 +6,11 @@
 /*   By: fzaazaa <fzaazaa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 02:04:48 by fzaazaa           #+#    #+#             */
-/*   Updated: 2024/11/10 02:13:56 by fzaazaa          ###   ########.fr       */
+/*   Updated: 2024/11/10 02:31:50 by fzaazaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(char c)
+int	ft_isalpha(int c)
 {
 	if ((c < 65) || (c > 122))
 		return (0);
@@ -19,14 +19,14 @@ int	ft_isalpha(char c)
 	return (1024);
 }
 
-int	ft_isdigit(char c)
+int	ft_isdigit(int c)
 {
 	if ((c < 48) || (c > 57))
 		return (0);
 	return (2048);
 }
 
-int	ft_isalnum(char c)
+int	ft_isalnum(int c)
 {
 	if (ft_isalpha(c) || ft_isdigit(c))
 		return (8);
@@ -40,8 +40,8 @@ int	main(void)
 {
 	int	i;
 
-	i = 0;
-	while (i < 128)
+	i = -8;
+	while (i < 132)
 	{
 		if (ft_isalnum(i) == isalnum(i))
 			printf("%c OK\n", i);

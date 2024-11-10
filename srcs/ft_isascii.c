@@ -1,20 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fzaazaa <fzaazaa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/10 01:52:26 by fzaazaa           #+#    #+#             */
-/*   Updated: 2024/11/10 02:31:21 by fzaazaa          ###   ########.fr       */
+/*   Created: 2024/11/10 02:17:26 by fzaazaa           #+#    #+#             */
+/*   Updated: 2024/11/10 02:32:16 by fzaazaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(int c)
+int	ft_isascii(int c)
 {
-	if ((c < 48) || (c > 57))
-		return (0);
-	return (2048);
+	return (c < 128 && c > -1);
 }
 
 /*#include<ctype.h>
@@ -27,16 +25,16 @@ int main(void)
 	i = -8;
 	while (i < 132)
 	{
-		if (ft_isdigit(i) == isdigit(i))
+		if (ft_isascii(i) == isascii(i))
 			printf("%c OK\n", i);
 		else
 			printf(
-				"%c KO : isdigit(%i) -> %i BUT ft_isdigit(%i) -> %i\n",
+				"%c KO : isascii(%i) -> %i BUT ft_isascii(%i) -> %i\n",
 				i,
 				i,
-				isdigit(i),
+				isascii(i),
 				i,
-				ft_isdigit(i)
+				ft_isascii(i)
 				);
 		i++;
 	}
