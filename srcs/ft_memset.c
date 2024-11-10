@@ -6,9 +6,11 @@
 /*   By: fzaazaa <fzaazaa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 02:55:35 by fzaazaa           #+#    #+#             */
-/*   Updated: 2024/11/10 05:00:31 by fzaazaa          ###   ########.fr       */
+/*   Updated: 2024/11/10 05:20:07 by fzaazaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+// voir issue github
 
 void	*ft_memset(void *s, int c, unsigned int n)
 {

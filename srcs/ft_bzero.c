@@ -6,9 +6,11 @@
 /*   By: fzaazaa <fzaazaa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 04:54:29 by fzaazaa           #+#    #+#             */
-/*   Updated: 2024/11/10 05:06:53 by fzaazaa          ###   ########.fr       */
+/*   Updated: 2024/11/10 05:20:15 by fzaazaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+// voir issue github
 
 void	ft_bzero(void *s, unsigned int size)
 {
