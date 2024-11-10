@@ -6,7 +6,7 @@
 /*   By: fzaazaa <fzaazaa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 14:35:21 by fzaazaa           #+#    #+#             */
-/*   Updated: 2024/11/10 14:59:41 by fzaazaa          ###   ########.fr       */
+/*   Updated: 2024/11/10 15:24:28 by fzaazaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*ft_strdup(const char *s)
 	char	*new;
 
 	i = 0;
-	new = (char *)malloc(sizeof(char) * ft_strlen(s));
+	new = (char *)malloc(sizeof(char) * ft_strlen(s) + 1);
 	while (s[i])
 	{
 		new[i] = s[i];
@@ -52,5 +52,7 @@ int main(int argc, char **argv)
 	ft_new = ft_strdup(argv[1]);
 	printf("strdup(\"%s\") -> \"%s\"\n", argv[1], new);
 	printf("ft_strdup(\"%s\") -> \"%s\"\n", argv[1], ft_new);
+	free(new);
+	free(ft_new);
 	return (0);
 }*/
