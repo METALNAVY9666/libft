@@ -5,78 +5,53 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fzaazaa <fzaazaa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/10 11:29:10 by fzaazaa           #+#    #+#             */
-/*   Updated: 2024/11/10 11:40:44 by fzaazaa          ###   ########.fr       */
+/*   Created: 2024/11/10 13:46:20 by fzaazaa           #+#    #+#             */
+/*   Updated: 2024/11/10 13:49:18 by fzaazaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// renvoie 0 si faux, 1 si vrai
-int	ft_isnumeric(char chr)
+int	is_sign(char c)
 {
-	if ((chr < '0') || (chr > '9'))
-		return (0);
-	return (1);
+	return (c == '-' || c == '+');
 }
 
-int	sign(char *str)
+int	is_number(char c)
 {
-	int	i;
-	int	count_minus;
-
-	i = 0;
-	count_minus = 0;
-	while (str[i])
-	{
-		if (str[i] == '-')
-			count_minus++;
-		i++;
-	}
-	if (i % 2)
-		return (-1);
-	return (1);
+	return (c <= '9' && c >= '0');
 }
 
-int	ft_strlen(char *str)
+int	ft_atoi(const char *str)
 {
-	int	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
-
-int	ft_atoi(char *str)
-{
-	int	i;
-	int	locked;
+	int	sign_count;
+	int	sign;
 	int	res;
 
-	i = 0;
-	locked = 0;
+	sign_count = 0;
+	sign = 1;
 	res = 0;
-	while (str[i])
+	while (*str == ' ')
+		str++;
+	while (is_sign(*str))
 	{
-		if (ft_isnumeric(str[i]))
-		{
-			locked = 1;
-			res = res * 10 + str[i] - 48;
-		}
-		else if (locked)
-			return (res * sign(str));
-		i++;
+		if (*str++ == '-')
+			sign = -1;
+		sign_count++;
 	}
-	return (res * sign(str));
+	if (sign_count > 1)
+		return (0);
+	while (is_number(*str))
+		res = res * 10 + *str++ - 48;
+	return (res * sign);
 }
 
-#include<stdio.h>
+/*#include<stdio.h>
 #include<stdlib.h>
 
 int	main(int argc, char **argv)
 {
 	if (argc != 2)
 		return (1);
-	printf("atoi('%s') -> %i\n", argv[1], atoi(argv[1]));
-	printf("ft_atoi('%s') -> %i\n", argv[1], ft_atoi(argv[1]));
+	printf("ft_atoi(\"%s\") -> %i\n", argv[1], ft_atoi(argv[1]));
+	printf("atoi(\"%s\") -> %i\n", argv[1], atoi(argv[1]));
 	return (0);
-}
+}*/
