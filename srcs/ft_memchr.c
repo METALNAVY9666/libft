@@ -6,7 +6,7 @@
 /*   By: fzaazaa <fzaazaa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 10:11:00 by fzaazaa           #+#    #+#             */
-/*   Updated: 2024/11/10 10:53:28 by fzaazaa          ###   ########.fr       */
+/*   Updated: 2024/11/10 10:55:46 by fzaazaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_memchr(const void *s, int c, int n)
 	while (i < n)
 	{
 		if (*((char *)(s)) == c)
-			return (void *)(s);
+			return ((void *)(s));
 		i++;
 		s++;
 	}

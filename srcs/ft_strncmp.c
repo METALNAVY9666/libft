@@ -6,7 +6,7 @@
 /*   By: fzaazaa <fzaazaa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 13:10:39 by fzaazaa           #+#    #+#             */
-/*   Updated: 2024/11/10 09:36:53 by fzaazaa          ###   ########.fr       */
+/*   Updated: 2024/11/10 10:55:58 by fzaazaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 	}
 	return (0);
 }
-#include<stdio.h>
+/*#include<stdio.h>
 #include<string.h>
 int	main(int argc, char **argv)
 {
@@ -39,4 +39,4 @@ int	main(int argc, char **argv)
 	printf("ft_strncmp -> %i\n", ft_strncmp(argv[1], argv[2], 3));
 	printf("strncmp -> %i\n", strncmp(argv[1], argv[2], 3));
 	return (0);
-}
+}*/
