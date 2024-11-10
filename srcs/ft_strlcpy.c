@@ -6,7 +6,7 @@
 /*   By: fzaazaa <fzaazaa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 05:52:05 by fzaazaa           #+#    #+#             */
-/*   Updated: 2024/11/10 07:05:48 by fzaazaa          ###   ########.fr       */
+/*   Updated: 2024/11/10 07:44:04 by fzaazaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int	ft_strlcpy(char *dst, const char *src, unsigned int n)
 /*#include<stdio.h>
 #include<stdlib.h>
 #include <bsd/string.h>
-
+// compiler avec le flag -lbsd
 int	main(int argc, const char **argv)
 {
 	char	*ft_dest;
