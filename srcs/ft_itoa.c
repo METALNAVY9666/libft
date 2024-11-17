@@ -6,7 +6,7 @@
 /*   By: fzaazaa <fzaazaa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 11:04:33 by fzaazaa           #+#    #+#             */
-/*   Updated: 2024/11/17 12:22:31 by fzaazaa          ###   ########.fr       */
+/*   Updated: 2024/11/17 15:29:41 by fzaazaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ int	count_digits(int n)
 	int	tmp;
 	int	len;
 
+	if (n == -2147483648)
+		return (11);
 	tmp = n;
 	len = 0;
 	if (tmp < 0)
@@ -33,42 +35,49 @@ int	count_digits(int n)
 	return (len);
 }
 
+char	*ft_strcpy(char *dest, char *src)
+{
+	int	i;
+
+	i = 0;
+	while (src[i] != '\0')
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
+}
+
 char	*ft_itoa(int n)
 {
 	char	*res;
 	int		i;
-	int		tmp;
 	int		min;
 
 	res = (char *)malloc(sizeof(char) * count_digits(n) + 1);
 	if (!res)
 		return (0);
-	i = count_digits(n) - 1;
 	if (n == -2147483648)
-	{
-		printf("Peter, the INT_MIN is here\n");
-		res = "-2147483648\0";
-		return (res);
-	}
-	tmp = n;
+		return (ft_strcpy(res, "-2147483648"));
+	res[count_digits(n)] = 0;
+	i = count_digits(n) - 1;
 	min = 0;
 	if (n < 0)
 	{
 		res[0] = '-';
-		tmp *= -1;
+		n *= -1;
 		min = 1;
 	}
 	while (i > min - 1)
 	{
-		res[i--] = tmp % 10 + 48;
-		tmp /= 10;
+		res[i--] = n % 10 + 48;
+		n /= 10;
 	}
-	res[count_digits(n)] = 0;
 	return (res);
 }
 
-
-#include<limits.h>
+/*#include<limits.h>
 
 int	main(void)
 {
@@ -83,4 +92,4 @@ int	main(void)
 	free(test);
 
 	return (0);
-}
+}*/
