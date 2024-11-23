@@ -6,24 +6,35 @@
 /*   By: fzaazaa <fzaazaa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 05:34:37 by fzaazaa           #+#    #+#             */
-/*   Updated: 2024/11/23 14:35:58 by fzaazaa          ###   ########.fr       */
+/*   Updated: 2024/11/23 19:30:33 by fzaazaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t size)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	unsigned int	i;
-	char			*tmp;
+	size_t				i;
+	unsigned char		*tmp;
+	unsigned char		*p1;
+	const unsigned char	*p2;
 
 	i = 0;
-	tmp = (char *)malloc(size);
-	while (i < size)
-		tmp[i++] = *((char *)src++);
-	i = 0;
-	while (i < size)
-		*((char *)dest++) = tmp[i++];
+	tmp = (unsigned char *)malloc(sizeof(unsigned char) * n);
+	if (!tmp)
+	{
+		free(tmp);
+		return (dest);
+	}
+	p1 = (unsigned char *)dest;
+	p2 = (unsigned char *)src;
+	while (i < n)
+	{
+		tmp[i] = p2[i];
+		i++;
+	}
+	while (n-- > 0)
+		p1[n] = tmp[n];
 	free(tmp);
 	return (dest);
 }
