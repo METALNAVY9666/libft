@@ -6,7 +6,7 @@
 /*   By: fzaazaa <fzaazaa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 19:29:48 by fzaazaa           #+#    #+#             */
-/*   Updated: 2024/11/23 18:59:19 by fzaazaa          ###   ########.fr       */
+/*   Updated: 2024/11/23 19:39:20 by fzaazaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ char	*ft_strchr(const char *s, int c);
 char	*ft_strdup(const char *s);
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 char	*ft_strjoin(char const *s1, char const *s2);
-size_t	ft_strlcat(char *dest, char *src, size_t siz);
+size_t	ft_strlcat(char *dst, const char *src, size_t siz);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlen(const char *s);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
