@@ -6,7 +6,7 @@
 /*   By: fzaazaa <fzaazaa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 19:29:48 by fzaazaa           #+#    #+#             */
-/*   Updated: 2024/11/23 16:01:58 by fzaazaa          ###   ########.fr       */
+/*   Updated: 2024/11/23 18:59:19 by fzaazaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 # include<unistd.h>
 # include<stddef.h>
 
-typedef unsigned long size_t;
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t size);
 void	*ft_calloc(size_t nmemb, size_t size);
@@ -42,7 +41,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 char	*ft_strjoin(char const *s1, char const *s2);
 size_t	ft_strlcat(char *dest, char *src, size_t siz);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
-size_t  ft_strlen(const char *s);
+size_t	ft_strlen(const char *s);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 int		ft_strncmp(char *s1, char *s2, size_t n);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
