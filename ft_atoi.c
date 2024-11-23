@@ -6,9 +6,11 @@
 /*   By: fzaazaa <fzaazaa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 13:46:20 by fzaazaa           #+#    #+#             */
-/*   Updated: 2024/11/10 13:49:18 by fzaazaa          ###   ########.fr       */
+/*   Updated: 2024/11/23 14:18:54 by fzaazaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include"libft.h"
 
 int	is_sign(char c)
 {
@@ -45,7 +47,6 @@ int	ft_atoi(const char *str)
 }
 
 /*#include<stdio.h>
-#include<stdlib.h>
 
 int	main(int argc, char **argv)
 {
