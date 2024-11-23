@@ -6,25 +6,17 @@
 /*   By: fzaazaa <fzaazaa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 13:51:24 by fzaazaa           #+#    #+#             */
-/*   Updated: 2024/11/10 14:26:55 by fzaazaa          ###   ########.fr       */
+/*   Updated: 2024/11/23 15:52:38 by fzaazaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(const char *str)
-{
-	int	i;
+#include"libft.h"
 
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
-
-char	*ft_strnstr(const char *big, const char *little, unsigned int len)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	unsigned int	i;
-	int				j;
-	int				t;
+	size_t			i;
+	size_t			j;
+	size_t			t;
 	char			*haybale;
 
 	i = 0;

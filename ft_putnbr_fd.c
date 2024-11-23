@@ -6,16 +6,11 @@
 /*   By: fzaazaa <fzaazaa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 14:45:24 by fzaazaa           #+#    #+#             */
-/*   Updated: 2024/11/17 14:52:49 by fzaazaa          ###   ########.fr       */
+/*   Updated: 2024/11/23 14:37:46 by fzaazaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<unistd.h>
-
-void	ft_putchar_fd(char c, int fd)
-{
-	write(fd, &c, 1);
-}
+#include"libft.h"
 
 void	ft_putnbr_fd(int n, int fd)
 {

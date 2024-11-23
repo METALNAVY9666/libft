@@ -6,22 +6,11 @@
 /*   By: fzaazaa <fzaazaa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 14:27:15 by fzaazaa           #+#    #+#             */
-/*   Updated: 2024/11/17 14:44:29 by fzaazaa          ###   ########.fr       */
+/*   Updated: 2024/11/23 14:37:10 by fzaazaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<unistd.h>
-#include<stdio.h>
-
-int	ft_strlen(const char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
+#include"libft.h"
 
 void	ft_putendl_fd(char *s, int fd)
 {
@@ -30,6 +19,7 @@ void	ft_putendl_fd(char *s, int fd)
 }
 
 /*#include<fcntl.h>
+#include<stdio.h>
 
 int	main(void)
 {

@@ -6,30 +6,22 @@
 /*   By: fzaazaa <fzaazaa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 05:52:05 by fzaazaa           #+#    #+#             */
-/*   Updated: 2024/11/10 07:44:04 by fzaazaa          ###   ########.fr       */
+/*   Updated: 2024/11/23 15:45:06 by fzaazaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
-{
-	int	i;
+#include"libft.h"
 
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
-
-int	ft_strlcpy(char *dst, const char *src, unsigned int n)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	unsigned int	i;
-	int				src_size;
+	size_t	i;
+	size_t	src_size;
 
 	src_size = ft_strlen((char *) src);
-	if (n == 0)
+	if (size == 0)
 		return (src_size);
 	i = 0;
-	while (src[i] && i < n - 1)
+	while (src[i] && i < size - 1)
 	{
 		dst[i] = src[i];
 		i++;

@@ -6,18 +6,20 @@
 /*   By: fzaazaa <fzaazaa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 02:43:24 by fzaazaa           #+#    #+#             */
-/*   Updated: 2024/11/10 02:52:03 by fzaazaa          ###   ########.fr       */
+/*   Updated: 2024/11/23 14:55:48 by fzaazaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(const char *str)
-{
-	int	i;
+#include"libft.h"
 
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
+size_t	ft_strlen(const char *str)
+{
+	size_t	size;
+
+	size = 0;
+	while (str[size])
+		size++;
+	return (size);
 }
 
 /*#include<stdio.h>

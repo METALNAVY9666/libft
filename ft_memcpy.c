@@ -6,18 +6,18 @@
 /*   By: fzaazaa <fzaazaa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 05:14:46 by fzaazaa           #+#    #+#             */
-/*   Updated: 2024/11/10 05:48:55 by fzaazaa          ###   ########.fr       */
+/*   Updated: 2024/11/23 14:35:21 by fzaazaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// voir issue github
+#include"libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, unsigned int n)
+void	*ft_memcpy(void *dest, const void *src, size_t size)
 {
 	unsigned int	i;
 
 	i = 0;
-	while (i++ < n)
+	while (i++ < size)
 		*((char *)dest++) = *((char *)src++);
 	return (dest);
 }

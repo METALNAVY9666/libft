@@ -6,25 +6,11 @@
 /*   By: fzaazaa <fzaazaa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 02:04:48 by fzaazaa           #+#    #+#             */
-/*   Updated: 2024/11/10 02:31:50 by fzaazaa          ###   ########.fr       */
+/*   Updated: 2024/11/23 14:29:13 by fzaazaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
-{
-	if ((c < 65) || (c > 122))
-		return (0);
-	if ((c < 97) && (c > 90))
-		return (0);
-	return (1024);
-}
-
-int	ft_isdigit(int c)
-{
-	if ((c < 48) || (c > 57))
-		return (0);
-	return (2048);
-}
+#include"libft.h"
 
 int	ft_isalnum(int c)
 {

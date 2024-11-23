@@ -6,11 +6,11 @@
 /*   By: fzaazaa <fzaazaa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 18:23:02 by fzaazaa           #+#    #+#             */
-/*   Updated: 2024/11/12 18:51:31 by fzaazaa          ###   ########.fr       */
+/*   Updated: 2024/11/23 15:53:47 by fzaazaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdlib.h>
+#include"libft.h"
 
 int	ft_count(char const *str, char c)
 {
@@ -24,16 +24,6 @@ int	ft_count(char const *str, char c)
 		str++;
 	}
 	return (total);
-}
-
-int	ft_strlen(const char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)

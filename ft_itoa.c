@@ -6,12 +6,11 @@
 /*   By: fzaazaa <fzaazaa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 11:04:33 by fzaazaa           #+#    #+#             */
-/*   Updated: 2024/11/17 15:29:41 by fzaazaa          ###   ########.fr       */
+/*   Updated: 2024/11/23 16:05:20 by fzaazaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdlib.h>
-#include<stdio.h>
+#include"libft.h"
 
 int	count_digits(int n)
 {

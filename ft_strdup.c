@@ -6,21 +6,11 @@
 /*   By: fzaazaa <fzaazaa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 14:35:21 by fzaazaa           #+#    #+#             */
-/*   Updated: 2024/11/10 15:24:28 by fzaazaa          ###   ########.fr       */
+/*   Updated: 2024/11/23 14:38:38 by fzaazaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdlib.h>
-
-int	ft_strlen(const char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
+#include"libft.h"
 
 char	*ft_strdup(const char *s)
 {
