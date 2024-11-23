@@ -6,36 +6,25 @@
 /*   By: fzaazaa <fzaazaa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 15:00:32 by fzaazaa           #+#    #+#             */
-/*   Updated: 2024/11/10 15:24:20 by fzaazaa          ###   ########.fr       */
+/*   Updated: 2024/11/23 14:24:54 by fzaazaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-void	ft_bzero(void *s, unsigned int size)
-{
-	unsigned int	i;
-
-	i = 0;
-	if (size == 0)
-		return ;
-	while (i++ < size)
-		*(char *)(s++) = 0;
-}
-
-void	*ft_calloc(unsigned int n_elements, unsigned int data_size)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*array;
 
-	if (!n_elements || !data_size)
+	if (!nmemb || !size)
 		return (0);
-	array = (void *)malloc(n_elements * data_size);
+	array = (void *)malloc(nmemb * size);
 	if (!array)
 	{
 		free(array);
 		return (0);
 	}
-	ft_bzero(array, n_elements * data_size);
+	ft_bzero(array, nmemb * size);
 	return (array);
 }
 
