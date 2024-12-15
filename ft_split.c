@@ -3,22 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fzaazaa <fzaazaa@student.42.fr>            +#+  +:+       +#+        */
+/*   By: fzaazaa <firas.zaazaa@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/23 15:56:48 by fzaazaa           #+#    #+#             */
-/*   Updated: 2024/11/23 18:49:55 by fzaazaa          ###   ########.fr       */
+/*   Updated: 2024/12/15 12:21:04 by fzaazaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
-
-typedef struct s_data
-{
-	char	**res;
-	int		i;
-	int		j;
-	int		index;
-}	t_data;
+#include "libft.h"
 
 int	count_words(char const *s, char c)
 {

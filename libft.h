@@ -3,18 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fzaazaa <fzaazaa@student.42.fr>            +#+  +:+       +#+        */
+/*   By: fzaazaa <firas.zaazaa@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 19:29:48 by fzaazaa           #+#    #+#             */
-/*   Updated: 2024/11/23 19:39:20 by fzaazaa          ###   ########.fr       */
+/*   Updated: 2024/12/15 12:22:16 by fzaazaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-# include<stdlib.h>
-# include<unistd.h>
-# include<stddef.h>
+# include <stdlib.h>
+# include <unistd.h>
+# include <stddef.h>
+
+typedef struct s_data
+{
+	char	**res;
+	int		i;
+	int		j;
+	int		index;
+}	t_data;
 
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t size);

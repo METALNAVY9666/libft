@@ -6,11 +6,11 @@
 /*   By: fzaazaa <firas.zaazaa@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 13:46:20 by fzaazaa           #+#    #+#             */
-/*   Updated: 2024/12/15 11:50:11 by fzaazaa          ###   ########.fr       */
+/*   Updated: 2024/12/15 12:28:13 by fzaazaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
 int	is_sign(char c)
 {
@@ -22,9 +22,15 @@ int	is_number(char c)
 	return (c <= '9' && c >= '0');
 }
 
-int is_blank(char c)
+int	is_blank(char c)
 {
-	return (c == ' ' || c == '\t' || c == '\n' || c == '\v' || c == '\f' || c == '\r');
+	int	i;
+
+	i = 0;
+	while (i < 6)
+		if (c == " \t\n\v\f\r"[i++])
+			return (1);
+	return (0);
 }
 
 int	ft_atoi(const char *str)

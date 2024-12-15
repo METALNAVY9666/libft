@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fzaazaa <fzaazaa@student.42.fr>            +#+  +:+       +#+        */
+/*   By: fzaazaa <firas.zaazaa@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 15:00:32 by fzaazaa           #+#    #+#             */
-/*   Updated: 2024/11/23 14:24:54 by fzaazaa          ###   ########.fr       */
+/*   Updated: 2024/12/15 12:42:51 by fzaazaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,12 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	void	*array;
 
 	if (!nmemb || !size)
-		return (0);
+		return (malloc(0));
 	array = (void *)malloc(nmemb * size);
 	if (!array)
 	{
 		free(array);
-		return (0);
+		return (NULL);
 	}
 	ft_bzero(array, nmemb * size);
 	return (array);

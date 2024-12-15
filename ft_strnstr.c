@@ -6,11 +6,11 @@
 /*   By: fzaazaa <firas.zaazaa@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 13:51:24 by fzaazaa           #+#    #+#             */
-/*   Updated: 2024/12/15 11:48:16 by fzaazaa          ###   ########.fr       */
+/*   Updated: 2024/12/15 12:23:35 by fzaazaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {

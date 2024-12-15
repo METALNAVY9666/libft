@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fzaazaa <fzaazaa@student.42.fr>            +#+  +:+       +#+        */
+/*   By: fzaazaa <firas.zaazaa@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 05:34:37 by fzaazaa           #+#    #+#             */
-/*   Updated: 2024/11/23 19:30:33 by fzaazaa          ###   ########.fr       */
+/*   Updated: 2024/12/15 12:39:14 by fzaazaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
@@ -19,6 +19,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	unsigned char		*p1;
 	const unsigned char	*p2;
 
+	if (dest == NULL && src == NULL)
+		return (NULL);
 	i = 0;
 	tmp = (unsigned char *)malloc(sizeof(unsigned char) * n);
 	if (!tmp)

@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fzaazaa <fzaazaa@student.42.fr>            +#+  +:+       +#+        */
+/*   By: fzaazaa <firas.zaazaa@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 05:52:05 by fzaazaa           #+#    #+#             */
-/*   Updated: 2024/11/23 15:45:06 by fzaazaa          ###   ########.fr       */
+/*   Updated: 2024/12/15 12:21:42 by fzaazaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
@@ -45,7 +45,12 @@ int	main(int argc, const char **argv)
 		return (1);
 	ft_dest = (char *)malloc(sizeof(char) * 5);
 	ft_size = ft_strlcpy(ft_dest, argv[1], 3);
-	printf("ft_strlcpy('%s') -> '%s' | src len : %i\n", argv[1], ft_dest, ft_size);
+	printf(
+		"ft_strlcpy('%s') -> '%s' | src len : %i\n",
+		argv[1],
+		ft_dest,
+		ft_size
+		);
 	free(ft_dest);
 
 	dest = (char *)malloc(sizeof(char) * 5);

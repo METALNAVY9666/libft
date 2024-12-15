@@ -6,11 +6,11 @@
 /*   By: fzaazaa <firas.zaazaa@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 13:10:39 by fzaazaa           #+#    #+#             */
-/*   Updated: 2024/12/15 11:40:55 by fzaazaa          ###   ########.fr       */
+/*   Updated: 2024/12/15 12:23:32 by fzaazaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
 int	ft_strncmp(char *s1, char *s2, size_t n)
 {

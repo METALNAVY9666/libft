@@ -6,13 +6,13 @@
 /*   By: fzaazaa <firas.zaazaa@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 18:23:02 by fzaazaa           #+#    #+#             */
-/*   Updated: 2024/12/15 12:11:15 by fzaazaa          ###   ########.fr       */
+/*   Updated: 2024/12/15 12:48:36 by fzaazaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int is_delimiter(char c, const char *set)
+int	is_delimiter(char c, const char *set)
 {
 	int	i;
 
@@ -28,24 +28,23 @@ int is_delimiter(char c, const char *set)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int	i;
-	int	j;
-	int start;
-	char *new;
+	int		i;
+	int		j;
+	int		start;
+	char	*new;
 
 	i = 0;
 	j = ft_strlen(s1) - 1;
 	while (is_delimiter(s1[i], set))
 		i++;
 	start = i;
-	while (is_delimiter(s1[j], set))
+	while (j >= i && is_delimiter(s1[j], set))
 		j--;
+	if (i > j)
+		return (ft_strdup(""));
 	new = (char *)malloc(sizeof(char) * (j - i + 2));
 	if (!new)
-	{
-		free(new);
-		return (0);
-	}
+		return (NULL);
 	while (i <= j)
 	{
 		new[i - start] = s1[i];

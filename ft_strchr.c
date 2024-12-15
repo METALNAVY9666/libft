@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fzaazaa <fzaazaa@student.42.fr>            +#+  +:+       +#+        */
+/*   By: fzaazaa <firas.zaazaa@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 09:16:22 by fzaazaa           #+#    #+#             */
-/*   Updated: 2024/11/23 14:38:26 by fzaazaa          ###   ########.fr       */
+/*   Updated: 2024/12/15 15:12:05 by fzaazaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {
@@ -21,11 +21,11 @@ char	*ft_strchr(const char *s, int c)
 	i = 0;
 	while (i < n + 1)
 	{
-		if (s[i] == c)
+		if (s[i] == (char)c)
 			return ((char *)(&(s[i])));
 		i++;
 	}
-	return (0);
+	return (NULL);
 }
 
 /*#include<string.h>

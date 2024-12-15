@@ -6,11 +6,11 @@
 /*   By: fzaazaa <firas.zaazaa@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 11:04:33 by fzaazaa           #+#    #+#             */
-/*   Updated: 2024/12/15 12:18:32 by fzaazaa          ###   ########.fr       */
+/*   Updated: 2024/12/15 12:21:59 by fzaazaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
 int	count_digits(int n)
 {
