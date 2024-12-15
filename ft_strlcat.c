@@ -3,32 +3,38 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fzaazaa <fzaazaa@student.42.fr>            +#+  +:+       +#+        */
+/*   By: fzaazaa <firas.zaazaa@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 07:12:41 by fzaazaa           #+#    #+#             */
-/*   Updated: 2024/11/23 19:38:55 by fzaazaa          ###   ########.fr       */
+/*   Updated: 2024/12/15 11:25:34 by fzaazaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t siz)
 {
+	size_t	dst_len;
+	size_t	src_len;
 	size_t	i;
-	size_t	j;
 
-	if (siz <= ft_strlen(dst))
-		return (siz + ft_strlen(src));
-	i = ft_strlen(dst);
-	j = 0;
-	while (!src[j] && i + 1 < siz)
+	dst_len = 0;
+	src_len = 0;
+	while (dst[dst_len] != '\0' && dst_len < siz)
+		dst_len++;
+	while (src[src_len] != '\0')
+		src_len++;
+	if (dst_len == siz)
+		return (siz + src_len);
+	i = 0;
+	while (src[i] != '\0' && (dst_len + i) < (siz - 1))
 	{
-		dst[i] = src[j];
+		dst[dst_len + i] = src[i];
 		i++;
-		j++;
 	}
-	dst[i] = 0;
-	return (ft_strlen(dst) + ft_strlen(&src[j]));
+	if (dst_len + i < siz)
+		dst[dst_len + i] = '\0';
+	return (dst_len + src_len);
 }
 
 /*#include<stdio.h>

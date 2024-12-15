@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fzaazaa <fzaazaa@student.42.fr>            +#+  +:+       +#+        */
+/*   By: fzaazaa <firas.zaazaa@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 13:51:24 by fzaazaa           #+#    #+#             */
-/*   Updated: 2024/11/23 15:52:38 by fzaazaa          ###   ########.fr       */
+/*   Updated: 2024/12/15 11:48:16 by fzaazaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		t = i;
 		while (haybale[t] == little[j])
 		{
-			if (!little[j + 1])
+			if (!little[j + 1] && t < len)
 				return (&(haybale[i]));
 			t++;
 			j++;

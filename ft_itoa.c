@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fzaazaa <fzaazaa@student.42.fr>            +#+  +:+       +#+        */
+/*   By: fzaazaa <firas.zaazaa@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 11:04:33 by fzaazaa           #+#    #+#             */
-/*   Updated: 2024/11/23 16:05:20 by fzaazaa          ###   ########.fr       */
+/*   Updated: 2024/12/15 12:18:32 by fzaazaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,12 @@ int	count_digits(int n)
 		tmp *= -1;
 		len++;
 	}
-	while (tmp > 1)
+	while (tmp >= 10)
 	{
 		tmp /= 10;
 		len++;
 	}
-	return (len);
+	return (len + 1);
 }
 
 char	*ft_strcpy(char *dest, char *src)

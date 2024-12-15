@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fzaazaa <fzaazaa@student.42.fr>            +#+  +:+       +#+        */
+/*   By: fzaazaa <firas.zaazaa@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 13:46:20 by fzaazaa           #+#    #+#             */
-/*   Updated: 2024/11/23 14:18:54 by fzaazaa          ###   ########.fr       */
+/*   Updated: 2024/12/15 11:50:11 by fzaazaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,11 @@ int	is_number(char c)
 	return (c <= '9' && c >= '0');
 }
 
+int is_blank(char c)
+{
+	return (c == ' ' || c == '\t' || c == '\n' || c == '\v' || c == '\f' || c == '\r');
+}
+
 int	ft_atoi(const char *str)
 {
 	int	sign_count;
@@ -31,7 +36,7 @@ int	ft_atoi(const char *str)
 	sign_count = 0;
 	sign = 1;
 	res = 0;
-	while (*str == ' ')
+	while (is_blank(*str))
 		str++;
 	while (is_sign(*str))
 	{

@@ -3,55 +3,55 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fzaazaa <fzaazaa@student.42.fr>            +#+  +:+       +#+        */
+/*   By: fzaazaa <firas.zaazaa@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 18:23:02 by fzaazaa           #+#    #+#             */
-/*   Updated: 2024/11/23 15:53:47 by fzaazaa          ###   ########.fr       */
+/*   Updated: 2024/12/15 12:11:15 by fzaazaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
-int	ft_count(char const *str, char c)
+int is_delimiter(char c, const char *set)
 {
-	int	total;
+	int	i;
 
-	total = 0;
-	while (*str)
+	i = 0;
+	while (set[i])
 	{
-		if (*str == c)
-			total++;
-		str++;
+		if (c == set[i])
+			return (1);
+		i++;
 	}
-	return (total);
+	return (0);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int		i;
-	int		j;
-	char	*new;
+	int	i;
+	int	j;
+	int start;
+	char *new;
 
 	i = 0;
-	j = 0;
-	while (s1[i])
-		if (ft_count(set, s1[i++]) > 0)
-			j++;
-	new = (char *)malloc(sizeof(char) * (ft_strlen(s1) - j + 1));
+	j = ft_strlen(s1) - 1;
+	while (is_delimiter(s1[i], set))
+		i++;
+	start = i;
+	while (is_delimiter(s1[j], set))
+		j--;
+	new = (char *)malloc(sizeof(char) * (j - i + 2));
 	if (!new)
 	{
 		free(new);
 		return (0);
 	}
-	i = 0;
-	j = 0;
-	while (s1[i])
+	while (i <= j)
 	{
-		if (!ft_count(set, s1[i]))
-			new[j++] = s1[i];
+		new[i - start] = s1[i];
 		i++;
 	}
-	new[j] = 0;
+	new[i - start] = 0;
 	return (new);
 }
 
